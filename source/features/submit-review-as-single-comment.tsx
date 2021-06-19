@@ -52,7 +52,7 @@ async function getNewCommentField(commentContainer: Element, lineBeingCommentedO
 }
 
 async function handleSubmitSingle(event: delegate.Event): Promise<void> {
-	const commentContainer = event.delegateTarget.closest('.js-comment')!;
+	const commentContainer = event.delegateTarget.closest('.js-suggested-changes-contents')!;
 	const commentText = select('textarea[name="pull_request_review_comment[body]"]', commentContainer)!.value;
 	if (!commentText) {
 		alert('Error: Comment not found and not submitted. More info in the console.');
